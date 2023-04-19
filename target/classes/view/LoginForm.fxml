@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LoginFormContext" prefHeight="828.0" prefWidth="1119.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelmanagementsystem.controller.LoginFormController">
+   <children>
+      <AnchorPane layoutY="33.0" prefHeight="733.0" prefWidth="1076.0" style="-fx-background-color: transparent;">
+         <children>
+            <AnchorPane layoutX="58.0" layoutY="115.0" prefHeight="445.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 2em;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <AnchorPane layoutX="-63.0" layoutY="-128.0" prefHeight="701.0" prefWidth="390.0" style="-fx-background-color: linear-gradient(to bottom left, #24c8ed ,#f3f2f5, #8551ed); -fx-background-radius: 7em;">
+                     <children>
+                        <ImageView fitHeight="207.0" fitWidth="293.0" layoutX="47.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/images/Hostel-removebg-preview.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="83.0" layoutY="139.0" prefHeight="74.0" prefWidth="168.0" text="D24">
+                           <font>
+                              <Font name="Lucida Bright Demibold" size="65.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXPasswordField fx:id="txtPassword" layoutX="512.0" layoutY="351.0" prefHeight="31.0" prefWidth="347.0" promptText="Password" text="1234" />
+                  <JFXTextField fx:id="txtUserName" layoutX="512.0" layoutY="271.0" prefHeight="31.0" prefWidth="347.0" promptText="Name" text="Dilusha" />
+                  <Label layoutX="355.0" layoutY="42.0" prefHeight="68.0" prefWidth="332.0" text="WELCOME TO">
+                     <font>
+                        <Font name="Ebrima Bold" size="47.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="663.0" layoutY="63.0" prefHeight="68.0" prefWidth="183.0" text="System" textFill="#9a4776">
+                     <font>
+                        <Font name="SimSun-ExtB" size="44.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="459.0" layoutY="175.0" prefHeight="57.0" prefWidth="258.0" text="Please Sign In">
+                     <font>
+                        <Font name="Segoe UI Black Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnLogin" buttonType="RAISED" layoutX="655.0" layoutY="431.0" onAction="#btnLoginOnAction" prefHeight="68.0" prefWidth="126.0" style="-fx-background-radius: 30; -fx-background-color: gray;" text="Sign In" textFill="#a52fd6">
+                     <ripplerFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1f8ee0" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
