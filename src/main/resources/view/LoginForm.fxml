@@ -12,16 +12,16 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="LoginFormContext" prefHeight="828.0" prefWidth="1119.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelmanagementsystem.controller.LoginFormController">
+<AnchorPane fx:id="LoginFormContext" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="674.0" prefWidth="1119.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.hostelmanagementsystem.controller.LoginFormController">
    <children>
-      <AnchorPane layoutY="33.0" prefHeight="733.0" prefWidth="1076.0" style="-fx-background-color: transparent;">
+      <AnchorPane layoutY="33.0" prefHeight="533.0" prefWidth="976.0" style="-fx-background-color: transparent;">
          <children>
             <AnchorPane layoutX="58.0" layoutY="115.0" prefHeight="445.0" prefWidth="1035.0" style="-fx-background-color: white; -fx-background-radius: 2em;">
                <effect>
                   <DropShadow />
                </effect>
                <children>
-                  <AnchorPane layoutX="-63.0" layoutY="-128.0" prefHeight="701.0" prefWidth="390.0" style="-fx-background-color: linear-gradient(to bottom left, #24c8ed ,#f3f2f5, #8551ed); -fx-background-radius: 7em;">
+                  <AnchorPane layoutX="-63.0" layoutY="-95.0" prefHeight="668.0" prefWidth="390.0" style="-fx-background-color: linear-gradient(to bottom left, #24c8ed ,#f3f2f5, #8551ed); -fx-background-radius: 7em;">
                      <children>
                         <ImageView fitHeight="207.0" fitWidth="293.0" layoutX="47.0" layoutY="157.0" pickOnBounds="true" preserveRatio="true">
                            <image>

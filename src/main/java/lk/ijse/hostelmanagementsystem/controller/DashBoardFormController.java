@@ -27,49 +27,37 @@ public class DashBoardFormController {
         dashBoardContext.getChildren().clear();
         dashBoardContext.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/"+ location +".fxml")));
     }
-    public void btnLogoutOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnLogoutOnAction() throws IOException {
         ((Stage)dashBoardMainContext.getScene().getWindow()).setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/LoginForm.fxml"))));
     }
 
-    public void btnRemainingOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnRemainingOnAction() throws IOException {
         setUi("RemainingKeyMoneyForm");
         new FadeIn(dashBoardContext).play();
-        /*dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/RemainingKeyMoneyForm.fxml")));*/
-    }
+          }
 
-    public void btnDetailsOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnDetailsOnAction() throws IOException {
         setUi("RoomReservationDetailsForm");
         new FadeIn(dashBoardContext).play();
-        /*dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/RoomReservationDetailsForm.fxml")));*/
     }
 
-    public void btnReserveRoomsOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnReserveRoomsOnAction() throws IOException {
         setUi("ReserveRoomsForm");
         new FadeIn(dashBoardContext).play();
-        /*dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ReserveRoomsForm.fxml")));*/
     }
 
-    public void btnManageRoomsOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnManageRoomsOnAction() throws IOException {
         setUi("ManageRoomForm");
         new FadeIn(dashBoardContext).play();
-        /*dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ManageRoomForm.fxml")));*/
     }
 
-    public void btnManageStudentsOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnManageStudentsOnAction() throws IOException {
         setUi("ManageStudentsForm");
         new FadeIn(dashBoardContext).play();
-       /* dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/ManageStudentsForm.fxml")));*/
     }
 
-    public void btnHomeOnAction(/*ActionEvent actionEvent*/) throws IOException {
+    public void btnHomeOnAction() throws IOException {
         setUi("HomeForm");
         new FadeIn(dashBoardContext).play();
-        /*dashBoardContext.getChildren().clear();
-        dashBoardContext.getChildren().add(FXMLLoader.load(getClass().getResource("/view/HomeForm.fxml")));*/
     }
 }

@@ -18,9 +18,10 @@
          <fill>
             <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
                <stops>
-                  <Stop color="#0f62b5" />
-                  <Stop color="#b920e8" offset="0.5824808184143224" />
-                  <Stop color="#74168c" offset="1.0" />
+                  <Stop color="#6510b2" />
+                  <Stop color="#6510b2" offset="0.007246376811594203" />
+                  <Stop color="#838383" offset="0.5281329923273659" />
+                  <Stop color="#13fcd1" offset="1.0" />
                </stops>
             </LinearGradient>
          </fill></Rectangle>

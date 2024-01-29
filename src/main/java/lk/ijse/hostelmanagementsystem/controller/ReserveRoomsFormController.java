@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
@@ -14,7 +15,7 @@ import lk.ijse.hostelmanagementsystem.dto.custom.RoomDTO;
 import lk.ijse.hostelmanagementsystem.dto.custom.RoomTypeDTO;
 import lk.ijse.hostelmanagementsystem.dto.custom.StudentDTO;
 import lk.ijse.hostelmanagementsystem.dto.custom.StudentRoomDTO;
-import lk.ijse.hostelmanagementsystem.entity.custom.StudentRoom;
+/*import lk.ijse.hostelmanagementsystem.entity.custom.StudentRoom;*/
 import lk.ijse.hostelmanagementsystem.service.custom.RoomService;
 import lk.ijse.hostelmanagementsystem.service.custom.RoomTypeService;
 import lk.ijse.hostelmanagementsystem.service.custom.StudentService;
@@ -24,6 +25,7 @@ import lk.ijse.hostelmanagementsystem.service.custom.impl.RoomTypeServiceImpl;
 import lk.ijse.hostelmanagementsystem.service.custom.impl.StudentServiceImpl;
 import lk.ijse.hostelmanagementsystem.service.custom.impl.TransactionalServiceImpl;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -35,6 +37,7 @@ public class ReserveRoomsFormController {
     public JFXComboBox<RoomDTO> cbRoom;
     public JFXTextField txtKeyMoney;
     public JFXTextField txtPayingAmount;
+
     public TableView table;
     public JFXTextField txtContact;
     public DatePicker calDateFrom;
@@ -53,6 +56,8 @@ public class ReserveRoomsFormController {
     public AnchorPane pane1;
     public AnchorPane pane2;
     public AnchorPane pane3;
+
+    public AnchorPane dashBoardContext;
 
 
     public void initialize(){
@@ -115,7 +120,9 @@ public class ReserveRoomsFormController {
     }
 
     public void setRoomData(RoomTypeDTO type){
+        System.out.println(type);
         List<RoomDTO> availableRooms = roomService.getAvailableRooms(type);
+        System.out.println(availableRooms);
         cbRoom.setItems(FXCollections.observableArrayList(availableRooms));
     }
 
@@ -157,5 +164,11 @@ public class ReserveRoomsFormController {
         }else {
             new Alert(Alert.AlertType.ERROR,"Failed").show();
         }
+    }
+
+    public void studentRegistatinOnAction(ActionEvent actionEvent) throws IOException {
+        dashBoardContext.getChildren().clear();
+        dashBoardContext.getChildren().add(FXMLLoader.load(this.getClass().getResource("/view/ManageStudentsForm.fxml")));
+
     }
 }
